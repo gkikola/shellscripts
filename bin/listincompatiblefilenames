@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# listincompatiblefilenames
+#
+# Find files within a directory (and its subdirectories) having names
+# that might not be compatible with other filesystems. If no directory
+# is given, then use the current directory.
+#
+# Copyright (C) 2017-2018 Greg Kikola
+
+# Usage: listincompatiblefilenames [directory [directory2...]]
+
+find "$@" -regex ".*[^]ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !#$%&'()+,./;=@[^_\`{}~-].*\|.*\." | sort
+exit $?

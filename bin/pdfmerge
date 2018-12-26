@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# pdfmerge
+#
+# Combine separate PDF files into a single PDF file. The actual merging
+# is performed using Ghostscript (gs).
+#
+# Copyright (C) 2018 Greg Kikola
+
+# Usage: pdfmerge output.pdf input1.pdf input2.pdf ... inputn.pdf
+
+outfile="$1"
+shift
+
+if [ -d "$outfile" ]
+then
+  echo "'$outfile' is a directory" >&2
+  exit 1
+elif [ -f "$outfile" ]
+then
+  prompt="The file '$outfile' already exists. Overwrite (y/n)? "
+  read -n1 -p "$prompt" overwrite
+  if [ $overwrite != "y" ] && [ $overwrite != "Y" ]
+  then
+    exit 1
+  fi
+fi
+
+# Merge the files
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress \
+   -sOutputFile="$outfile" "$@"
+exit $?

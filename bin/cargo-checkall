@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# cargo-checkall
+#
+# When run from a Rust project directory, checks the source code for
+# errors, common mistakes, and formatting problems.
+
+cargo fmt -- --check
+cargo clippy

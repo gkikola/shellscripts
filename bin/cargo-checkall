@@ -4,6 +4,8 @@
 #
 # When run from a Rust project directory, checks the source code for
 # errors, common mistakes, and formatting problems.
+#
+# Copyright (C) 2019 Greg Kikola
 
 cargo fmt -- --check
 cargo clippy

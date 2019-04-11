@@ -13,14 +13,14 @@ See the file [LICENSE.txt](LICENSE.txt) for full details.
 Scripts
 -------
 
-* cargo-checkall: In a Rust project directory, check for errors, run
+* `cargo-checkall`: In a Rust project directory, check for errors, run
   Clippy with `cargo clippy`, and check formatting with
   `cargo fmt -- --check`.
-* checkplaylist: Read an .m3u playlist and verify that all of the
+* `checkplaylist`: Read an .m3u playlist and verify that all of the
   files in the playlist exist.
-* listincompatiblefilenames: Find files within a directory (and its
+* `listincompatiblefilenames`: Find files within a directory (and its
   subdirectories) having names that might not be compatible with other
   filesystems. If no directory is given, then use the current
   directory.
-* pdfmerge: Combine separate PDF files into a single PDF file. The
-  actual merging is performed using Ghostscript (gs).
+* `pdfmerge`: Combine separate PDF files into a single PDF file. The
+  actual merging is performed using Ghostscript (`gs`).

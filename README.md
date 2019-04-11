@@ -13,6 +13,9 @@ See the file [LICENSE.txt](LICENSE.txt) for full details.
 Scripts
 -------
 
+* cargo-checkall: In a Rust project directory, check for errors, run
+  Clippy with `cargo clippy`, and check formatting with
+  `cargo fmt -- --check`.
 * checkplaylist: Read an .m3u playlist and verify that all of the
   files in the playlist exist.
 * listincompatiblefilenames: Find files within a directory (and its

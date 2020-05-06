@@ -1,0 +1,15 @@
+#! /bin/bash
+
+# cbcopy
+#
+# Copy a line of text to the X clipboard. This relies on the program
+# xclip.
+#
+# Copyright (C) 2020 Greg Kikola
+
+if type xclip >/dev/null 2>&1; then
+  echo -n $@ | xclip -selection clipboard
+else
+  echo >&2 "Error: xclip could not be found"
+  exit 1
+fi

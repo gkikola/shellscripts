@@ -16,6 +16,9 @@ Scripts
 * `cargo-checkall`: In a Rust project directory, check for errors, run
   Clippy with `cargo clippy`, and check formatting with
   `cargo fmt -- --check`.
+* `cbcopy`: Copy a line of text to the X clipboard (requires `xclip`).
+* `cbpaste`: Paste the X clipboard contents to standard out (requires
+  `xclip`).
 * `checkplaylist`: Read an .m3u playlist and verify that all of the
   files in the playlist exist.
 * `listincompatiblefilenames`: Find files within a directory (and its

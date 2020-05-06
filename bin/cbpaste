@@ -1,0 +1,15 @@
+#! /bin/bash
+
+# cbpaste
+#
+# Paste the contents of the X clipboard to standard out. This relies
+# on the program xclip.
+#
+# Copyright (C) 2020 Greg Kikola
+
+if type xclip >/dev/null 2>&1; then
+  xclip -o -selection clipboard
+else
+  echo >&2 "Error: xclip could not be found"
+  exit 1
+fi
